@@ -1,0 +1,117 @@
+.about-me-container {
+  padding: 60px 20px 40px; /* Adjust top padding to account for fixed navbar */
+  color: #333;
+  /* padding-bottom: 270px; */
+}
+
+.intro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.typing {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap; 
+  overflow: hidden; /* Hides the overflowing text */
+  border-right: 0.1em solid #333; /* Creates a caret */
+  animation: typing 1s steps(100, start), blink-caret 0.5s step-start infinite;
+}
+
+.about-me-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  opacity: 0;
+  animation: fadeInText1 1s forwards;
+  animation-delay: 1s;
+}
+
+.about-me-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-content {
+  flex: 1;
+  font-size: 1.2em;
+  line-height: 1.6;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease, border-color 0.3s, color 0.3s, box-shadow 0.3s;
+  padding: 10px;
+  border: 2px solid #e0e0e0;
+}
+
+.text-content:hover{
+  box-shadow: 6px 6px black;
+  border: 2px solid black;
+
+}
+
+.text-content p strong {
+  color: rgb(15, 41, 47);
+  font-size: 1.3rem;
+}
+
+.experience-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.experience-buttons ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.experience-buttons li {
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+  box-shadow:5px 5px rgba(0, 0, 0, 0.1);
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.experience-buttons li:hover {
+  background-color: #e0e0e0;
+  box-shadow: 3px 3px rgba(0, 0, 0, 1);
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 40%; } 
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #333; }
+}
+
+@keyframes fadeInText1 {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
